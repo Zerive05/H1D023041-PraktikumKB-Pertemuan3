@@ -3,12 +3,12 @@ import statistics
 
 def main():
   """Program sederhana untuk mengolah data nilai siswa."""
-  data_siswa = {}
-  jumlah_siswa = int(input("Masukkan jumlah siswa: "))
-  for i in range(jumlah_siswa):
+  datas = {}
+  jumlahs = int(input("Masukkan jumlah siswa: "))
+  for i in range(s):
     nama = input(f"Masukkan nama siswa ke-{i+1}: ")
     nilai = [random.randint(0, 100) for _ in range(5)]
-    data_siswa[nama] = nilai
+    datas[nama] = nilai
 
   while True:
     print("\nMenu:")
@@ -20,42 +20,42 @@ def main():
     pilihan = input("Masukkan pilihan Anda: ")
 
     if pilihan == "1":
-      tampilkan_data_siswa(data_siswa)
+      tampilkan_data_siswa(datas)
     elif pilihan == "2":
-      hitung_rata_rata(data_siswa)
+      hitung_rata_rata(datas)
     elif pilihan == "3":
-      hitung_nilai_ekstrem(data_siswa)
+      hitung_nilai_ekstrem(datas)
     elif pilihan == "4":
       break
     else:
       print("Pilihan tidak valid.")
 
-def tampilkan_data_siswa(data_siswa):
+def tampilkan_data_siswa(datas):
   """Menampilkan data nilai siswa."""
 
   print("\nData Nilai Siswa:")
-  for nama, nilai in data_siswa.items():
+  for nama, nilai in datas.items():
     print(f"{nama}: {nilai}")
 
-def hitung_rata_rata(data_siswa):
+def hitung_rata_rata(datas):
   """Menghitung dan menampilkan rata-rata nilai siswa."""
 
-  nama_siswa = input("Masukkan nama siswa: ")
-  if nama_siswa in data_siswa:
-    rata_rata = statistics.mean(data_siswa[nama_siswa])
-    print(f"Rata-rata nilai {nama_siswa}: {rata_rata}")
+  namas = input("Masukkan nama siswa: ")
+  if namas in datas:
+    rata_rata = statistics.mean(datas[namas])
+    print(f"Rata-rata nilai {namas}: {rata_rata}")
   else:
     print("Nama siswa tidak ditemukan.")
 
-def hitung_nilai_ekstrem(data_siswa):
+def hitung_nilai_ekstrem(datas):
   """Menghitung dan menampilkan nilai tertinggi dan terendah siswa."""
 
-  nama_siswa = input("Masukkan nama siswa: ")
-  if nama_siswa in data_siswa:
-    nilai_tertinggi = max(data_siswa[nama_siswa])
-    nilai_terendah = min(data_siswa[nama_siswa])
-    print(f"Nilai tertinggi {nama_siswa}: {nilai_tertinggi}")
-    print(f"Nilai terendah {nama_siswa}: {nilai_terendah}")
+  namas = input("Masukkan nama siswa: ")
+  if namas in datas:
+    nilaitinggi = max(datas[namas])
+    nilairendah = min(data_siswa[namas])
+    print(f"Nilai tertinggi {namas}: {ntinggi}")
+    print(f"Nilai terendah {namas}: {nrendah}")
   else:
     print("Nama siswa tidak ditemukan.")
 
